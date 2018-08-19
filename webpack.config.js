@@ -1,13 +1,1 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-module.exports = (env) => {
-  return {
-    mode: env.mode,
-    output: {
-      filename: "index.js",
-    },
-    plugins: [
-      new HtmlWebpackPlugin(),
-    ],
-  };
-};
+module.exports = (env) => require(`./config/webpack.${env.mode}`)(env);
