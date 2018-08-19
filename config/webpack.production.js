@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env) => {
   return {
@@ -6,8 +7,21 @@ module.exports = (env) => {
     output: {
       filename: "[chunkhash].js",
     },
-    plugins: [
-      new HtmlWebpackPlugin(),
+    plugins: [      
+      new MiniCssExtractPlugin({
+        filename: "[chunkhash].css",
+      }),
+      new HtmlWebpackPlugin(),      
     ],
+    module: {
+      rules: [
+        {
+          test: /\.css/,
+          use: [
+            MiniCssExtractPlugin.loader, "css-loader"
+          ]
+        }   
+      ]
+    },
   };
 };
