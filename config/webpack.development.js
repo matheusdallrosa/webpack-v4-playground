@@ -9,5 +9,15 @@ module.exports = (env) => {
     plugins: [
       new HtmlWebpackPlugin(),
     ],
+    module: {
+      rules: [
+        {
+          test: /\.css/,
+          use: [
+            "style-loader", "css-loader"
+          ]
+        }   
+      ]
+    },
   };
 };
