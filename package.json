@@ -1,0 +1,29 @@
+{
+  "name": "webpack-v4-playground",
+  "version": "1.0.0",
+  "description": "My webpack v4 configuration.",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "dev": "npm run webpack -- --env.mode development --watch",
+    "prod": "npm run webpack -- --env.mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusdallrosa/webpack-v4-playground.git"
+  },
+  "keywords": [
+    "webpack-v4",
+    "config"
+  ],
+  "author": "Matheus Dall'Rosa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheusdallrosa/webpack-v4-playground/issues"
+  },
+  "homepage": "https://github.com/matheusdallrosa/webpack-v4-playground#readme",
+  "devDependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
