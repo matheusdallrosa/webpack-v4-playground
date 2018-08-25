@@ -23,5 +23,14 @@ module.exports = (env) => {
         }   
       ]
     },
+    resolve: {
+      extensions: [
+        '.js',
+      ],
+      modules: [
+        'src', 
+        'node_modules',
+      ],
+    },
   };
 };
